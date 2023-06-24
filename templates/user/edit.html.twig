@@ -4,8 +4,7 @@
 
 {% block body %}
     <h1>Edit User</h1>
-
-    {{ include('user/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ component('edit_user', { user: user }) }}
 
     <a href="{{ path('app_user_index') }}">back to list</a>
 

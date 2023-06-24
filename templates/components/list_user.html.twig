@@ -1,0 +1,9 @@
+<div{{ attributes }}
+    data-action="change->live#update"
+    data-poll
+>
+<ul>
+    {% for user in this.users %}
+        <li>{{ user.nom }}</li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,21 @@
+<div{{ attributes }}
+    data-action="change->live#update"
+    data-poll
+>
+    {{ form_start(this.form, {
+        action: path('app_user_new'),
+        attr: {
+            'data-action': 'live#action',
+            'data-action-name': 'prevent|save'
+        }
+    }) }}
+        {{ form_row(this.form.Nom) }}
+        {{ form_row(this.form.Prenom, {
+            label: 'Password'
+        }) }}
+        {{ form_row(this.form.Age) }}
+        {{ form_row(this.form.Adresse) }}
+
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+    {{ form_end(this.form) }}
+</div>
