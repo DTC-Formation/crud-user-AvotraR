@@ -1,81 +1,70 @@
-<div{{ attributes }}>
-    <div>
-        <h1>{{ user.Nom }}</h1>
-
-        <hr>
-
-        <div class="mb-3">
-            <label for="user_Nom" class="form-label"><h2>Nom</h2></label>
-            <div class="input-group">
-                <input
-                    type="text"
-                    data-model="user.Nom"
-                    data-action="blur->live#update"
-                    class="form-control"
-                    value="{{ user.Nom }}"
-                    id="user_Nom"
-                >
-            </div>
-        </div>
-
-        <div class="mb-3">
-            <label for="user_Prenom" class="form-label"><h2>Prenom</h2></label>
-            <div class="input-group">
-                <textarea
-                    data-model="user.Prenom"
-                    data-action="live#update"
-                    class="form-control"
-                    id="user_Prenom"
-                >{{ user.Prenom }}</textarea>
-            </div>
-        </div>
-        <div class="mb-3">
-            <label for="user_Age" class="form-label"><h2>Age</h2></label>
-            <div class="input-group">
-                <input
-                    type="number"
-                    data-model="user.Age"
-                    data-action="blur->live#update"
-                    class="form-control"
-                    value="{{ user.Age}}"
-                    id="user_Age"
-                >
-            </div>
-        </div>
-        <div class="mb-3">
-            <label for="user_Adresse" class="form-label"><h2>Adresse</h2></label>
-            <div class="input-group">
-                <input
-                    type="text"
-                    data-model="user.Adresse"
-                    data-action="blur->live#update"
-                    class="form-control"
-                    value="{{ user.Adresse }}"
-                    id="user_Adresse"
-                >
-            </div>
-        </div>
+<tr {{ attributes }}>
+    {% if isEdit %}
+        <td scope="col">
+            <input
+                type="text"
+                data-model="user.Nom"
+                data-action="blur->live#update"
+                class="form-control"
+                value="{{ user.Nom }}"
+                id="user_Nom"
+            >
+        </td>
+        <td scope="col">
+            <input
+                type="text"
+                data-model="user.Prenom"
+                data-action="blur->live#update"
+                class="form-control"
+                value="{{ user.Prenom }}"
+                id="user_Nom"
+            >
+        </td>
+        <td scope="col">
+            <input
+                type="number"
+                data-model="user.Age"
+                data-action="blur->live#update"
+                class="form-control"
+                value="{{ user.Age}}"
+                id="user_Age"
+            >
+        </td>
+        <td scope="col">
+            <input
+                type="text"
+                data-model="user.Adresse"
+                data-action="blur->live#update"
+                class="form-control"
+                value="{{ user.Adresse }}"
+                id="user_Adresse"
+            >
+        </td>
         
-    </div>
-
-    <div class="my-5 p-5 shadow bg-secondary text-light">
-        <h3>{{ user.Nom }}</h3>
-        {{ user.Prenom }}
-        {{ user.Age }}
-        {{ user.Adresse }}
-    </div>
-
-    <div class="d-grid gap-2">
+        <td> 
         <button
             data-action="live#action"
             data-action-name="save"
             class="btn btn-primary btn-sm"
-        >
-            Enregistrer les modifications
-        </button>
-    </div>
-
-    {% if isSaved %}
-        <div class="alert alert-success my-4">Enregistrer !</div>
-    {% endif %}
-</div>
+            type="button"
+        >edit</button></td>
+    {%else%}
+        <td scope="col">{{user.nom}}</td>
+        <td scope="col">{{user.prenom}}</td>
+        <td scope="col">{{user.age}}</td>
+        <td scope="col">{{user.adresse}}</td>
+        <td> 
+        <button
+            data-action="live#action"
+            data-action-name="Edit"
+            class="btn btn-primary btn-sm"
+        ><i class="fa fa-wrench"></i></button></td>
+        <td>
+            {{ component('delete', {
+                user : user,
+            }) }}
+        </td>
+        
+      
+        {%endif%}
+</tr>

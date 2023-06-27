@@ -3,16 +3,55 @@
 {% block title %}User index{% endblock %}
 
 {% block body %}
+{{component('_message')}}
 <div class="container">
+    <div class="top-title">
+        <h5>Welcome!
+        <span {{ stimulus_controller('symfony/ux-typed', {
+            strings: ['You can create', 'You can edit', 'You can delete'],
+            smartBackspace: true,
+            startDelay: 300,
+            backSpeed: 60,
+            backDelay: 100,
+            loop: true,
+            showCursor: true,
+            cursorChar: '|'
+        }) }}></span></h5>
+    </div>
     <div class="row">
-        <div class="col">
-            {{ component('create_user') }}
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="title">
+                        {%if user%}
+                            Edit {{user.nom}}
+                        {%else%}
+                            Create user
+                        {%endif%}
+                    </h4>
+                    <div class="mt-5">
+                        {% if user is not null%}
+                        {{ component('edit_user',{'user':user}) }}
+                        {%else%}
+                        {{ component('create_user') }}
+                        {%endif%}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8 mt-sm-30 mt-xs-30">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-sm-flex justify-content-between align-items-center">
+                        <h4 class="title">Lists user</h4>
+                    </div>
+                    <div class="mt-4">        
+                        {{ component('list_user') }}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row mt-4">
-        <div class="col">
-            {{ component('list_user') }}
-        </div>
-    </div>
+</div>
 
 {% endblock %}

@@ -31,7 +31,7 @@ class CreateCompo extends AbstractController
         $entityManager->persist($user);
         $entityManager->flush();
 
-        $this->addFlash('success', 'Post saved!');
+        $this->addFlash('success', 'is saved!');
 
     }
     protected function instantiateForm(): FormInterface

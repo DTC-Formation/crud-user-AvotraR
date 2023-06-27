@@ -3,19 +3,34 @@
     data-poll
 >
     {{ form_start(this.form, {
-        action: path('app_user_new'),
         attr: {
             'data-action': 'live#action',
             'data-action-name': 'prevent|save'
         }
     }) }}
-        {{ form_row(this.form.Nom) }}
-        {{ form_row(this.form.Prenom, {
-            label: 'Password'
+        {{ form_row(this.form.Nom,{
+            'attr':{
+                'placeholder':'Nom'
+            }
         }) }}
-        {{ form_row(this.form.Age) }}
-        {{ form_row(this.form.Adresse) }}
+        {{ form_row(this.form.Prenom,{
+            'attr':{
+                'placeholder':'Prenom'
+            }
+        }) }}
+        {{ form_row(this.form.Age,{
+            'attr':{
+                'placeholder':'Age',
+                'class':'form'
+            }
+        }) }}
+        {{ form_row(this.form.Adresse,{
+            'attr':{
+                'placeholder':'Adresse'
+            }
+        }) }}
 
-        <button type="submit" class="btn btn-primary">Enregistrer</button>
+        <button type="submit" class="save-btn" >Save</button>
+        
     {{ form_end(this.form) }}
 </div>

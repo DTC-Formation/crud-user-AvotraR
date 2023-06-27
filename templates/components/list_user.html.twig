@@ -1,9 +1,22 @@
-<div{{ attributes }}
-    data-action="change->live#update"
-    data-poll
->
-<ul>
-    {% for user in this.users %}
-        <li>{{ user.nom }}</li>
-    {% endfor %}
-</ul>
+<div{{ attributes }} data-action="change->live#update" data-poll>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prenom</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Adresse</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in this.users %}
+                {{ component('edit_user', {
+                    user : user,
+                    isEditing: false
+                }) }}
+                
+                {% endfor %}
+            </tbody>
+        </table>
+       
+</div>

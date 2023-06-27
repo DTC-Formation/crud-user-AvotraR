@@ -1,2 +1,73 @@
 @import "./util/bootstrap.min.css";
+@import "./util/fontawesome.min.css";
+:root{
+    --color-title:rgb(0, 255, 60);
+    --bg-color-dark:#151515;
+    --content-black: #393939;
+    --text-color:#fff;
+    --text-color-fade:#e9e9e9;
+}
+body{
+    margin:0;
+    padding:0;
+    color:var(--text-color);
+    font-family: 'Poppins' sans-serif;
+    background-color:var(--bg-color-dark);
+}
+th{
+    color:var(--text-color);
+}
+td{
+    color:var(--text-color-fade);
+}
+.form-control{
+    border:none;
+    background-color: #313131;
+}
+.form-control:active{
+    border:none;
+    background-color: #313131;
+}
+.card{
+    border:1px;
+    border-radius: 0.7em;
+    box-shadow: #151515;
+    background-color: var(--content-black);
+}
+.top-title{
+    margin: 20px;
+}
+.top-title h5 span{
+    font-family: 'Clicker Script', cursive;
+    color:var(--color-title);
+}
+.title{
+    font-size: 24px;
+    color:var(--color-title);
+    font-family: 'Clicker Script', cursive;
+}
 
+.save-btn {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    color: var(--text-color);
+    border-radius: 40px;
+    display: inline-block;
+    white-space: nowrap;
+    border: none;
+    background: var(--color-title);
+    transition: all 0.3s ease;
+}
+.save-btn:hover{
+    transform: scale(1.05);
+}
+#message{
+    border: 1px solid;
+    margin: 10px;
+    padding: 20px;
+    width:200px;
+    background-color: green;
+    position: absolute;
+    z-index:1;
+}
