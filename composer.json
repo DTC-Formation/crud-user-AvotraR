@@ -7,7 +7,12 @@
         "php": ">=8.0.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
+<<<<<<< HEAD
         "doctrine/doctrine-bundle": "^2.10",
+=======
+        "doctrine/annotations": "^2.0",
+        "doctrine/doctrine-bundle": "^2.9",
+>>>>>>> 03cac5210b637b523cf1e5268619f4499407c9f9
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.15",
         "phpdocumentor/reflection-docblock": "^5.3",
@@ -38,7 +43,10 @@
         "symfony/twig-bundle": "6.0.*",
         "symfony/ux-live-component": "^2.9",
         "symfony/ux-twig-component": "^2.9",
+<<<<<<< HEAD
         "symfony/ux-typed": "^2.9",
+=======
+>>>>>>> 03cac5210b637b523cf1e5268619f4499407c9f9
         "symfony/validator": "6.0.*",
         "symfony/web-link": "6.0.*",
         "symfony/webpack-encore-bundle": "^1.17",

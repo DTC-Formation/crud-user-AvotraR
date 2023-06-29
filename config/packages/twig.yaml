@@ -1,6 +1,10 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
+<<<<<<< HEAD
     form_themes: ['bootstrap_5_layout.html.twig']
+=======
+
+>>>>>>> 03cac5210b637b523cf1e5268619f4499407c9f9
 when@test:
     twig:
         strict_variables: true

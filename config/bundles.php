@@ -15,5 +15,8 @@ return [
     Symfony\WebpackEncoreBundle\WebpackEncoreBundle::class => ['all' => true],
     Symfony\UX\TwigComponent\TwigComponentBundle::class => ['all' => true],
     Symfony\UX\LiveComponent\LiveComponentBundle::class => ['all' => true],
+<<<<<<< HEAD
     Symfony\UX\Typed\TypedBundle::class => ['all' => true],
+=======
+>>>>>>> 03cac5210b637b523cf1e5268619f4499407c9f9
 ];
