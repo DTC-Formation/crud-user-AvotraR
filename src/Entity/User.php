@@ -16,7 +16,6 @@ class User
     #[ORM\Column(length: 255)]
     private ?string $Nom = null;
 
-<<<<<<< HEAD
     #[ORM\Column(length: 255)]
     private ?string $Prenom = null;
 
@@ -25,16 +24,6 @@ class User
 
     #[ORM\Column(length: 255)]
     private ?string $Adresse = null;
-=======
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $prenom = null;
-
-    #[ORM\Column(length: 100)]
-    private ?string $CIN = null;
-
-    #[ORM\Column(length: 150)]
-    private ?string $Addresse = null;
->>>>>>> 03cac5210b637b523cf1e5268619f4499407c9f9
 
     public function getId(): ?int
     {
@@ -46,11 +35,7 @@ class User
         return $this->Nom;
     }
 
-<<<<<<< HEAD
     public function setNom(string $Nom): static
-=======
-    public function setNom(string $Nom): self
->>>>>>> 03cac5210b637b523cf1e5268619f4499407c9f9
     {
         $this->Nom = $Nom;
 
@@ -59,26 +44,16 @@ class User
 
     public function getPrenom(): ?string
     {
-<<<<<<< HEAD
         return $this->Prenom;
     }
 
     public function setPrenom(string $Prenom): static
     {
         $this->Prenom = $Prenom;
-=======
-        return $this->prenom;
-    }
-
-    public function setPrenom(?string $prenom): self
-    {
-        $this->prenom = $prenom;
->>>>>>> 03cac5210b637b523cf1e5268619f4499407c9f9
 
         return $this;
     }
 
-<<<<<<< HEAD
     public function getAge(): ?int
     {
         return $this->Age;
@@ -87,21 +62,10 @@ class User
     public function setAge(int $Age): static
     {
         $this->Age = $Age;
-=======
-    public function getCIN(): ?string
-    {
-        return $this->CIN;
-    }
-
-    public function setCIN(string $CIN): self
-    {
-        $this->CIN = $CIN;
->>>>>>> 03cac5210b637b523cf1e5268619f4499407c9f9
 
         return $this;
     }
 
-<<<<<<< HEAD
     public function getAdresse(): ?string
     {
         return $this->Adresse;
@@ -110,16 +74,6 @@ class User
     public function setAdresse(string $Adresse): static
     {
         $this->Adresse = $Adresse;
-=======
-    public function getAddresse(): ?string
-    {
-        return $this->Addresse;
-    }
-
-    public function setAddresse(string $Addresse): self
-    {
-        $this->Addresse = $Addresse;
->>>>>>> 03cac5210b637b523cf1e5268619f4499407c9f9
 
         return $this;
     }

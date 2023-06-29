@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import "./util/bootstrap.min.css";
 @import "./util/fontawesome.min.css";
 :root{
@@ -72,8 +71,3 @@ td{
     position: absolute;
     z-index:1;
 }
-=======
-body {
-    background-color: lightgray;
-}
->>>>>>> 03cac5210b637b523cf1e5268619f4499407c9f9

@@ -33,15 +33,6 @@
         <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener" />
     </listeners>
 
-<<<<<<< HEAD
     <extensions>
     </extensions>
-=======
-    <!-- Run `composer require symfony/panther` before enabling this extension -->
-    <!--
-    <extensions>
-        <extension class="Symfony\Component\Panther\ServerExtension" />
-    </extensions>
-    -->
->>>>>>> 03cac5210b637b523cf1e5268619f4499407c9f9
 </phpunit>
