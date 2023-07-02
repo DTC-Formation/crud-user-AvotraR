@@ -25,6 +25,9 @@ class User
     #[ORM\Column(length: 255)]
     private ?string $Adresse = null;
 
+    #[ORM\Column]
+    private ?float $height = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -77,4 +80,17 @@ class User
 
         return $this;
     }
+
+    public function getHeight(): ?float
+    {
+        return $this->height;
+    }
+
+    public function setHeight(float $height): static
+    {
+        $this->height = $height;
+
+        return $this;
+    }
+
 }

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New User{% endblock %}
+
+{% block body %}
+    <h1>Create new User</h1>
+    {{ form_start(form) }}
+        {{ form_row(form.Nom,{'attr':{'placeholder':'Identifient'},'label':'Nommm','label_attr':{'class':'momo'} }) }}
+        {{ form_row(form.Prenom,{'attr':{'placeholder':'Prenom admin'},'label':'Prenom'}) }}
+        {{ form_row(form.Age) }}
+        {{ form_row(form.Adresse) }}
+        {{ form_row(form.height) }}
+        <button class="btn">{{ button_label|default('Save') }}</button>
+    {{ form_end(form,{render_rest:false}) }}
+
+    <a href="{{ path('app_u_user_index') }}">back to list</a>
+{% endblock %}
